@@ -1,0 +1,90 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Project Information</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script type="text/javascript" src="scripts/caman.full.min.js"></script>
+  <script type="text/javascript" src="scripts/filters.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href='style.css' rel='stylesheet' type='text/css'/>
+	<style>
+		@font-face {
+			font-family: Infinity;
+			src: url(res/Infinity.ttf);
+		}
+		@font-face {
+			font-family: Nord;
+			src: url(res/Nord.ttf);
+		}
+		@font-face {
+			font-family: MacNord;
+			src: url(res/MacNord.ttf);
+		}
+		@font-face {
+			font-family: Architect;
+			src: url(res/ArchitectsDaughter.ttf);
+		}
+    </style>
+  </head>
+  
+  <body>
+  <header>
+    <div class="nav">
+      <ul>
+        <li class="home"><a id="home" href="home.php">Home</a></li>
+        <li class="processing"><a id="process" href="">Process</a>
+          <ul>
+            <li><a href="filters.php">Preset Filters</a></li>
+            <li><a href="customfilters.php">Custom Filters</a></li>
+            <li><a href="">Crop Image</a></li>
+            <li><a href="">Resize Image</a></li>
+          </ul>
+        </li>
+        <li><a href="analyze.php">Analyze</a></li>
+        <li><a href="albums.php">Albums</a></li>
+        <li><a class="active" href="info.html">Project Info</a></li>
+      </ul>
+    </div>
+  </header>
+  <br><br>
+  <div style="margin-left: 5%; margin-right: 5%; font-family: Architect;">
+    <h1>Help:</h1>
+	<p style="font-size: 15; margin-top: 12px;">The webpage requires a valid login to use. You may register if you need to
+		at the home page. </p>
+	<p style="font-size: 15; margin-top: 12px;">After logging in you will be taken to your albums page. Here you can add or delete pictures
+		to your available albums. There are 5 with 10 spaces each.</p>
+	<p style="font-size: 15; margin-top: 12px;">You can use custom filters/preset filters or analyze your pictures
+		by using the "process" selection on the nav bar. Your albums will appear on the right column
+		and you can drag and drop them onto the canvas. </p>
+	<p style="font-size: 15; margin-top: 12px;">The preset filter page gives you preset filters on buttons you can apply. After you are satisfied
+		with your changes you can either save it or use a different picture. </p>
+	<p style="font-size: 15; margin-top: 12px;">The custom filters page allows you to adjust sliders of values such as contrast, brightness,
+		saturation, etc. to fine tweak your pictures. You may also save the final result here as well. </p>
+	<p style="font-size: 15; margin-top: 12px;">The analyze page will provide you with a histogram of each color value (RGB) and the average color
+		both visually and in hexadecimal form. 
+	<p style="font-size: 15; margin-top: 12px;">To log out of the system please click the home link on the top navigation bar and there will be a 
+		button to log out. </p>
+	<br>
+	<h1>Technical Information:</h1>
+	<p style="font-size: 15; margin-top: 12px;">Members of the group and work contributed:</p>
+	<p style="font-size: 15; margin-top: 12px; margin-left: 25px;"> Alec Horne - 50% &emsp; Mikayla Wilfred - 50%</p>
+	<p style="font-size: 15; margin-top: 12px;">Security:</p>
+	<p style="font-size: 15; margin-top: 12px; margin-left: 25px;">For security, each page requires the user to be logged in,
+		or more specifically the session variable "username" must be set. This is set only when the user sucessfully logs in and
+		the password and username are checked against the database. Then each page has a simple check at the top to see if this is true.
+		If it is not, the user is redirected to the login/register page.</p>
+	<p style="font-size: 15; margin-top: 12px;">Database Design:</p>
+	<p style="font-size: 15; margin-top: 12px; margin-left: 25px;">For the database we used a total of 6 different tables. The first one
+		simply holds the user login, password, name, and e-mail address. The other 5 are for the picture albums of each user.
+		Each album table has a place for the album name, and then there are 10 entries for each picture. The picture is not held in the 
+		database but rather the path name that leads to its location on the server. All pictures are uploaded to the uploads folder.</p>
+	<p style="font-size: 15; margin-top: 12px;">Architecture:</p>
+	<p style="font-size: 15; margin-top: 12px; margin-left: 25px;">The architecture for this project is pretty simple. First off, each user
+		must be logged in to get any further on the website. Each php page checks to see if the user is logged in before displaying its contents.
+		If not they are redirected to the login/register page. After they login they are taken to their albums page. From here the user can add
+		photos or delete them from their albums. The analyze and filter pages all process the album information from the database and allow the user
+		to drag and drop them onto the canvas to be modified/analyzed.</p>
+		
+  </div>
+  </body>
+</html>

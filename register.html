@@ -1,0 +1,86 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="style.css">
+	<style>
+		@font-face {
+			font-family: Infinity;
+			src: url(res/Infinity.ttf);
+		}
+		@font-face {
+			font-family: Nord;
+			src: url(res/Nord.ttf);
+		}
+		@font-face {
+			font-family: MacNord;
+			src: url(res/MacNord.ttf);
+		}
+		@font-face {
+			font-family: Architect;
+			src: url(res/ArchitectsDaughter.ttf);
+		}
+    </style>
+  </head>
+  <body>
+  <header>
+    <div class="nav">
+      <ul>
+        <li class="home"><a id="home" href="">Home</a></li>
+        <li class="processing"><a id="process" href="">Process</a>
+          <ul>
+            <li><a href="filters.php">Preset Filters</a></li>
+            <li><a href="customfilters.php">Custom Filters</a></li>
+            <li><a href="">Crop Image</a></li>
+            <li><a href="">Resize Image</a></li>
+          </ul>
+        </li>
+        <li><a href="" class="active">Analyze</a></li>
+        <li><a href="albums.php">Albums</a></li>
+        <li><a href="info.html">Project Info</a></li>
+      </ul>
+    </div>
+  </header>
+  <br><br>
+  <div style="width: 40%; margin-left: 5%; margin-top: 5%;">
+	<form class="form-horizontal" action="create_account.php" method="POST">
+	  <div class="form-group">
+        <label for="exampleInputName2" class="col-sm-3 control-label">First Name</label>
+        <div class="col-sm-6">
+          <input type="text" name="fname" class="form-control" id="exampleInputName2" placeholder="First Name">
+        </div>
+      </div>
+	  <div class="form-group">
+        <label for="exampleInputName2" class="col-sm-3 control-label">Last Name</label>
+        <div class="col-sm-6">
+          <input type="text" name="lname" class="form-control" id="exampleInputName2" placeholder="Last Name">
+        </div>
+      </div>
+	  <div class="form-group">
+        <label for="inputEmail3" class="col-sm-3 control-label">Email</label>
+        <div class="col-sm-6">
+          <input type="email" name="email" class="form-control" id="inputEmail3" placeholder="Email">
+        </div>
+      </div>
+	  <div class="form-group">
+        <label for="exampleInputName2" class="col-sm-3 control-label">Login</label>
+        <div class="col-sm-6">
+          <input type="text" name="login" class="form-control" id="inputLogin" placeholder="Login">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputPassword3" class="col-sm-3 control-label">Password</label>
+        <div class="col-sm-6">
+          <input type="password" name="password" class="form-control" id="exampleInputName2" placeholder="Password">
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-3 col-sm-10">
+          <button type="submit" class="btn btn-default">Register</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  </body>
+</html>
